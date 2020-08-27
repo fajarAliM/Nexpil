@@ -1,0 +1,92 @@
+.avatars {
+    width: 504px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.avatar-main-section {
+    width: 404px;
+}
+.avatars-title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.avatars-title-text {
+    font-family: boldTitles;
+}
+.avatars-title-add-button {
+    width: 29px;
+    height: 29px;
+    cursor: pointer;
+}
+.search-bar {
+    width: 354px;
+    height: 39px;
+    background-color: white;
+    width: 354px;
+    height: 49px;
+    box-shadow: 0px 2px 4px #0000001A;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.search-icon {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.search-input {
+    height: 100%;
+    flex: 1;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    font-family: regularText;
+}
+.users-avatar {
+    flex: 1;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.user-avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 354px;
+    margin-top: 40px;
+}
+.avatar-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding-left: 30px;
+}
+.user-name-text {
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+    font-size: 25px;
+    color: #333333;
+    font-family: mediumText;
+}
+.user-type-text {
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    color: #333333;
+    font-family: regularText;
+}

@@ -1,0 +1,32 @@
+.intro-page-container {
+    background-color: #f7f7fa;
+    width: 100%;
+}
+.main-section {
+    padding-left: 170px;
+    display: flex;
+    flex-direction: row;
+}
+.intro-page-intro-section {
+    flex: 1;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px 0px 0px 50px;
+    box-shadow: -1px 3px 6px #0000001A;
+}
+.intro-title {
+    font-size: 80px;
+    color: #333333;
+    padding-left: 272px;
+    margin: 0px;
+    font-family: boldTitles;
+}
+.intro-description {
+    padding-left: 272px;
+    font-size: 40px;
+    color: #333333;
+    font-family: regularText;
+}

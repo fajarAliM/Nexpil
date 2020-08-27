@@ -1,0 +1,22 @@
+.super-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-main-container {
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+}
+@font-face {
+  font-family: boldTitles;
+  src: url('./assets/fonts/Montserrat-Bold.otf');
+}
+@font-face {
+  font-family: regularText;
+  src: url('./assets/fonts/Montserrat-Regular.otf');
+}
+@font-face {
+  font-family: mediumText;
+  src: url('./assets/fonts/Montserrat-Medium.otf');
+}
