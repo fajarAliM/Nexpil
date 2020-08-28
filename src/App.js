@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
 import {
-  IntroPage,
-  UserDetailPage,
+  HomePage,
 } from './pages';
 import {
-  BrowserRouter,
   Switch,
   Route,
 } from "react-router-dom";
@@ -16,8 +14,7 @@ function App() {
       <div className="super-container">
         <div className="page-main-container">
           <Switch>
-            <Route path={routers.INTROPAGE} exact component={IntroPage} />
-            <Route path={routers.USERDETAILPAGE} exact component={UserDetailPage} />
+            <Route path={routers.HOMEPAGE} exact component={HomePage} />
           </Switch>
         </div>
       </div>

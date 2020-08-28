@@ -4,7 +4,7 @@
   align-items: center;
 }
 .page-main-container {
-  width: 1920px;
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -19,4 +19,7 @@
 @font-face {
   font-family: mediumText;
   src: url('./assets/fonts/Montserrat-Medium.otf');
+}
+* {
+  box-sizing: border-box;
 }

@@ -1,12 +1,14 @@
 .avatars {
-    width: 504px;
+    width: 25%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    height: 1080px;
+    position: fixed;
 }
 .avatar-main-section {
-    width: 404px;
+    width: 80%;
+    padding-top: 50px;
 }
 .avatars-title-container {
     width: 100%;
@@ -24,11 +26,9 @@
     cursor: pointer;
 }
 .search-bar {
-    width: 354px;
-    height: 39px;
-    background-color: white;
-    width: 354px;
+    width: 95%;
     height: 49px;
+    background-color: white;
     box-shadow: 0px 2px 4px #0000001A;
     border-radius: 30px;
     display: flex;
@@ -59,7 +59,17 @@
     flex-direction: row;
     justify-content: space-between;
     width: 354px;
-    margin-top: 40px;
+    padding: 15px 0px;
+}
+.user-avatar-selected {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 15px;
+    background: linear-gradient(to right, #877CEC, #4939E3);
+    border-radius: 55px;
+    box-shadow: 0px 3px 6px #0000001A;
 }
 .avatar-image {
     width: 65px;
@@ -74,7 +84,7 @@
     flex: 1;
     padding-left: 30px;
 }
-.user-name-text {
+.user-avatar .user-name-text {
     margin: 0px;
     text-align: left;
     width: 100%;
@@ -82,11 +92,73 @@
     color: #333333;
     font-family: mediumText;
 }
-.user-type-text {
+.user-avatar .user-type-text {
     margin: 0px;
     text-align: left;
     width: 100%;
     font-size: 20px;
     color: #333333;
     font-family: regularText;
+}
+.user-avatar-selected .user-name-text {
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    font-family: mediumText;
+}
+.user-avatar-selected .user-type-text {
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-family: regularText;
+}
+@media only screen and (max-width: 1800px) {
+    .user-name-text {
+        font-size: 21px;
+    }
+    .user-type-text {
+        font-size: 18px;
+    }
+    .avatar-image {
+        width: 57px;
+        height: 57px;
+    }
+}
+@media only screen and (max-width: 1630px) {
+    .user-name-text {
+        font-size: 18px;
+    }
+    .user-type-text {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1450px) {
+    .user-name-text {
+        font-size: 18px;
+    }
+    .user-type-text {
+        font-size: 15px;
+    }
+    .user-info {
+        padding-left: 20px;
+    }
+}
+@media only screen and (max-width: 1385px) {
+    .user-name-text {
+        font-size: 15px;
+    }
+    .user-type-text {
+        font-size: 12px;
+    }
+    .user-info {
+        padding-left: 10px;
+    }
+    .avatar-image {
+        width: 45px;
+        height: 45px;
+    }
 }

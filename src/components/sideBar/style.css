@@ -1,14 +1,13 @@
 .side-bar {
-    width: 170px;
-    height: 100vh;
+    width: 7%;
+    height: 1080px;
     max-height: 1080px;
-    position: fixed;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    position: fixed;
 }
 .side-bar-title {
     margin: 0px;
@@ -20,22 +19,35 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 140px;
 }
 .navigation-icon-none-selected {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 15px;
     border-radius: 30px;
-    background-color: #F7F7FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 .navigation-icon-selected {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 15px;
     border-radius: 30px;
     background-color: #F7F7FA;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1385px) {
+    .navigation-icon-selected {
+        padding: 10px;
+    }
+    .navigation-icon-none-selected {
+        padding: 10px;
+    }
 }
