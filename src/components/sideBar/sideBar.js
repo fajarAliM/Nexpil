@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import { BsPerson, BsCalendar, BsChatSquareDots, BsBell, BsGear } from "react-icons/bs";
 import { sharedColors } from '../../theme/sharedColor';
@@ -7,50 +7,52 @@ import { Link } from "react-router-dom";
 
 const navIcons = [
     {
+        route: routers.HOMEPAGE,
         element: <BsPerson size="33px" color={sharedColors.primaryFontColor} />,
-        selected: true,
+        id: 'home',
     }, {
+        route: "",
         element: <BsCalendar size="33px" color={sharedColors.primaryFontColor} />,
-        selected: false,
+        id: 'calendar',
     }, {
+        route: routers.CHATPAGE,
         element: <BsChatSquareDots size="33px" color={sharedColors.primaryFontColor} />,
-        selected: false,
+        id: 'chat',
     }, {
+        route: "",
         element: <BsBell size="33px" color={sharedColors.primaryFontColor} />,
-        selected: false,
+        id: 'notify',
     }, {
+        route: "",
         element: <BsGear size="33px" color={sharedColors.primaryFontColor} />,
-        selected: false,
+        id: 'setting',
     },
 ]
 
-export const SideBar = () => {
+export const SideBar = ({select}) => {
     // Style for special text
     const specialColorFont = {
         color: sharedColors.primaryFontColor,
     }
 
     const [navMenu, setNavMenu] = useState(navIcons);
+    const [selectedTab, setSelectedTab] = useState();
+    useEffect(() => {
+        setSelectedTab(select)
+    }, [select]);
 
-    // Highlight selected icon
-    const setHighlight = (elementItem) => {
-        let virtualArray = [];
-        for(let i = 0; i < navMenu.length; i++) {
-            if(i !== elementItem) virtualArray.push({...navMenu[i], selected: false});
-            if(i === elementItem) virtualArray.push({...navMenu[i], selected: true})
-        }
-        setNavMenu(virtualArray)
-    }
     return (
         <div className="side-bar">
             <h1 className="side-bar-title">n<span style={specialColorFont}>.</span></h1>
             <div className="navigation-icons-container">
                 {navMenu.map((item, i) =>
-                    <div onClick={()=>setHighlight(i)} key={i} className={item.selected == false ? "navigation-icon-none-selected" : "navigation-icon-selected"}>
-                        {item.element}
-                    </div>
+                    <Link to={item.route}>
+                        <div id={item.id} key={i} className={item.id !== selectedTab ? "navigation-icon-none-selected" : "navigation-icon-selected"}>
+                            {item.element}
+                        </div>
+                    </Link>
                 )}
             </div>
-        </div>
+        </div >
     )
 }

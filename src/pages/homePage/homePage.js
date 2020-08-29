@@ -20,10 +20,9 @@ export const HomePage = () => {
 
     // Get the main section states.
     const mainSectionState = useSelector(state => state.HomeReducer);
-    console.log('main section switch', mainSectionState);
     return (
         <div className="intro-page-container">
-            <SideBar />
+            <SideBar select={"home"} />
             <div className="main-section">
                 <AvatarsContainer setMainSection={setMainSection} />
                 {mainPart === "intro" &&

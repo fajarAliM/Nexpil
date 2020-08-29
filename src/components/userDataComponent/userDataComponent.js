@@ -52,7 +52,7 @@ export const UserDataComponent = () => {
                         <p className="user-type">{currectSelectedUser.type}</p>
                     </div>
                     <div style={style} className="show-chat-icon-container">
-                        <BsChatSquareDots size="29px" color="white" />
+                        <BsChatSquareDots size="24px" color="white" />
                     </div>
                 </div>
                 <div className="card-user-info-section">

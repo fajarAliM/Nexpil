@@ -1,4 +1,4 @@
-.intro-page-container {
+.chat-page-container {
     background-color: #f7f7fa;
     width: 100%;
     display: flex;
@@ -10,32 +10,30 @@
     flex-direction: row;
     flex: 1;
 }
-.intro-page-intro-section {
+.chat-page-section {
     flex: 1;
     background-color: white;
     height: 1080px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     border-radius: 50px 0px 0px 50px;
     box-shadow: -1px 3px 6px #0000001A;
 }
-.intro-title {
-    font-size: 80px;
-    color: #333333;
-    padding-left: 272px;
-    margin: 0px;
-    font-family: boldTitles;
-}
-.intro-description {
-    padding-left: 272px;
-    font-size: 40px;
-    color: #333333;
-    font-family: regularText;
-}
-.intro-section-part {
+.chat-section-part {
     margin-left: 25%;
     flex: 1;
+}
+.chatting-section {
+    width: 60%;
+    padding: 25px;
+}
+.chatting-user-info-section {
+    width: 40%;
+    background-color: #F7F7FA;
+    box-shadow: -1px 0px 6px #0000001A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media only screen and (max-width: 1200px) {
     .main-section {

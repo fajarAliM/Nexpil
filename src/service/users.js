@@ -10,6 +10,12 @@ export const users = [
         zip: "60654",
         phoneNumber: '(312) 587 8910',
         address: '100 W Ontario St.',
+        allergies: "None Reported",
+        medication: ["Calcitrol", "Ciprofloaxacin", "Glipizide", "Metformin", "Simvastatin"],
+        lastChatKey: "client",
+        lastChat: "Ok!. Thanks",
+        chatDate: "Jul 29",
+        lastChatNumber: 0,
         lapResult: {
             bloodTest: [
                 {
@@ -80,6 +86,12 @@ export const users = [
         phoneNumber: '(312) 587 8910',
         zip: "60654",
         address: '100 W Ontario St.',
+        allergies: "None Reported",
+        medication: ["Calcitrol", "Ciprofloaxacin", "Glipizide", "Metformin", "Simvastatin"],
+        lastChatKey: "client",
+        lastChat: "Will do. How about changing avatar?",
+        chatDate: "Jul 29",
+        lastChatNumber: 2,
         lapResult: {
             bloodTest: [
                 {
@@ -148,7 +160,13 @@ export const users = [
         age: '47 years old',
         phoneNumber: '(312) 587 8910',
         address: '100 W Ontario St.',
+        allergies: "None Reported",
         cityState: "Chicago, IL",
+        medication: ["Calcitrol", "Ciprofloaxacin", "Glipizide", "Metformin", "Simvastatin"],
+        lastChatKey: "me",
+        lastChat: "Goodbye.",
+        chatDate: "Jul 29",
+        lastChatNumber: 0,
         zip: "60654",
         lapResult: {
             bloodTest: [
@@ -218,7 +236,13 @@ export const users = [
         age: '47 years old',
         phoneNumber: '(312) 587 8910',
         address: '100 W Ontario St.',
+        allergies: "None Reported",
         cityState: "Chicago, IL",
+        medication: ["Calcitrol", "Ciprofloaxacin", "Glipizide", "Metformin", "Simvastatin"],
+        lastChatKey: "me",
+        lastChat: "You too. Thank you",
+        chatDate: "Jul 29",
+        lastChatNumber: 0,
         zip: "60654",
         lapResult: {
             bloodTest: [
@@ -288,6 +312,12 @@ export const users = [
         age: '47 years old',
         phoneNumber: '(312) 587 8910',
         address: '100 W Ontario St.',
+        allergies: "None Reported",
+        medication: ["Calcitrol", "Ciprofloaxacin", "Glipizide", "Metformin", "Simvastatin"],
+        lastChatKey: "client",
+        lastChat: "Thanks Dr. Smith!",
+        chatDate: "Jul 29",
+        lastChatNumber: 0,
         cityState: "Chicago, IL",
         zip: "60654",
         lapResult: {
@@ -359,12 +389,18 @@ export const users = [
         age: '47 years old',
         phoneNumber: '(312) 587 8910',
         address: '100 W Ontario St.',
+        allergies: "None Reported",
+        medication: ["Calcitrol", "Ciprofloaxacin", "Glipizide", "Metformin", "Simvastatin"],
+        lastChatKey: "client",
+        lastChat: "Bye",
+        chatDate: "Jul 29",
+        lastChatNumber: 0,
         cityState: "Chicago, IL",
         zip: "60654",
         lapResult: {
             bloodTest: [
                 {
-                    title: "cholesterol",
+                    title: "Cholesterol",
                     info: {
                         unit: "mg/dl", 
                         amount: 229,
@@ -429,6 +465,12 @@ export const users = [
         age: '47 years old',
         phoneNumber: '(312) 587 8910',
         address: '100 W Ontario St.',
+        allergies: "None Reported",
+        medication: ["Calcitrol", "Ciprofloaxacin", "Glipizide", "Metformin", "Simvastatin"],
+        lastChatKey: "me",
+        lastChat: "See you next week.",
+        chatDate: "Jul 29",
+        lastChatNumber: 0,
         cityState: "Chicago, IL",
         zip: "60654",
         lapResult: {

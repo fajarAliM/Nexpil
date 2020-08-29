@@ -22,7 +22,7 @@ export const AvatarsContainer = ({setMainSection}) => {
             if(i === userItem) virtualArray.push({...usersData[i], selected: true})
         }
         setUsersData(virtualArray);
-        setMainSection("userData");
+        if(setMainSection) setMainSection("userData");
         dispatch({type: GET_USER, payLoad: usersData[userItem]})
     }
     return (

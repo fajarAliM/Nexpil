@@ -1,22 +1,22 @@
 .data-container {
-    flex: 1;
+    flex: 1 1;
     display: flex;
     flex-direction: column;
-    padding-left: 1%;
-    margin-left: 25%;
-    padding-bottom: 40px;
+    padding-left: 27%;
+    padding-bottom: 50px;
+    width: 100%;
 }
 .card-container {
-    width: 66.5%;
+    width: 66%;
     background-color: white;
     box-shadow: 0px 3px 6px #0000001A;
     border-radius: 40px;
     margin-top: 50px;
-    padding: 50px;
+    padding: 35px;
     position: fixed;
 }
 .scroll-card-section {
-    margin-top: 370px;
+    margin-top: 280px;
 }
 .card-avatar-section{
     width: 100%;
@@ -28,8 +28,8 @@
     border-bottom: 2px solid #4939E3;
 }
 .card-user-avatar-image {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50px;
 }
 .user-name-container {
@@ -37,24 +37,23 @@
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    height: 80px;
-    padding-left: 40px;
+    padding-left: 30px;
 }
 .user-name {
     font-family: mediumText;
-    font-size: 40px;
+    font-size: 35px;
     color: #333333;
     margin: 0px;
 }
 .user-type {
     font-family: regularText;
-    font-size: 25px;
+    font-size: 21px;
     color: #333333;
     margin: 0px;
 }
 .show-chat-icon-container {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     box-shadow: 0px 5px 10px #0000001A;
     border-radius: 50px;
     display: flex;
@@ -69,21 +68,21 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .info-section {
     display: flex;
     flex-direction: column;
 }
 .user-info-title {
-    font-size: 13px;
+    font-size: 12px;
     font-family: regularText;
     text-align: left;
     margin: 0px;
     color: #707070;
 }
 .user-info-description {
-    font-size: 18px;
+    font-size: 15px;
     font-family: mediumText;
     text-align: left;
     margin: 0px;
@@ -95,7 +94,7 @@
     box-shadow: 0px 3px 6px #0000001A;
     border-radius: 40px;
     margin-top: 20px;
-    padding: 50px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
 }
@@ -107,10 +106,11 @@
     justify-content: space-between;
 }
 .pagination-title {
-    font-size: 40px;
+    font-size: 35px;
     font-family: mediumText;
     color: #333333;
     font-weight: 300;
+    margin: 0px;
 }
 .pagination-list {
     width: 50%;
@@ -152,14 +152,15 @@
     align-items: center;
     background-color: #F7F7FA;
     border-radius: 40px;
+    margin-top: 15px;
 }
 .medical-no-report-text {
-    font-size: 30px;
+    font-size: 25px;
     font-family: boldTitles;
     color: #969696;
 }
 .card-title {
-    font-size: 40px;
+    font-size: 35px;
     margin: 0px;
     color: #333333;
     font-family: mediumText;
@@ -191,13 +192,13 @@
     border-bottom: 3px solid #4939E3;
 }
 .title-text {
-    font-size: 25px;
+    font-size: 23px;
     font-family: mediumText;
     color: #4939E3;
     margin: 0px;
 }
 .title-date-text {
-    font-size: 20px;
+    font-size: 18px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
@@ -211,7 +212,7 @@
     padding-top: 20px;
 }
 .description-row-title {
-    font-size: 20px;
+    font-size: 17px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
@@ -223,7 +224,7 @@
     margin: 0px;
 }
 .description-row-info span{
-    font-size: 20px;
+    font-size: 18px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
@@ -259,14 +260,14 @@
     align-items: center;
 }
 .assigned-task-text {
-    font-size: 22px;
+    font-size: 20px;
     font-family: mediumText;
     color: #4939E3;
     margin: 0px;
     white-space: nowrap;
 }
 .subscribe-text {
-    font-size: 17px;
+    font-size: 15px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
@@ -282,7 +283,8 @@
     justify-content: space-between;
     align-items: center;
     border: 2px dashed #4939E3;
-    margin-right: 30%;
+    margin-right: auto;
+    margin-left: 20px;
     cursor: pointer;
 }
 .note-row {
@@ -337,6 +339,75 @@
     height: 50px;
     width: 17%;
 }
-@media only screen and (max-width: 1800px) {
-    
+@media only screen and (max-width: 1500px) {
+    .user-info-title {
+        font-size: 11px;
+    }
+    .card-user-avatar-image {
+        width: 70px;
+        height: 70px;
+    }
+    .user-name {
+        font-size: 30px;
+    }
+    .user-type {
+        font-size: 17px;
+    }
+    .show-chat-icon-container {
+        width: 50px;
+        height: 50px;
+    }
+    .pagination-title {
+        font-size: 30px;
+    }
+    .pagination-item {
+        font-size: 17px;
+    }
+    .pagination-item-selected p {
+        font-size: 17px;
+    }
+    .card-title {
+        font-size: 30px;
+    }
+    .title-text {
+        font-size: 20px;
+    }
+    .title-date-text {
+        font-size: 15px;
+    }
+    .description-row-title {
+        font-size: 16px;
+    }
+    .description-row-info span {
+        font-size: 16px;
+    }
+    .description-row-info {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 1430px) {
+    .assigned-task-text {
+        font-size: 18px;
+    }
+    .subscribe-text {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 1330px) {
+    .pagination-list {
+        width: 57%;
+    }
+}
+@media only screen and (max-width: 1245px) {
+    .user-info-title {
+        font-size: 10px;
+    }
+    .user-info-description {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .card-container {
+        width: 70.5%;
+    }
 }

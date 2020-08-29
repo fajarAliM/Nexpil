@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {
   HomePage,
+  ChatPage,
 } from './pages';
 import {
   Switch,
@@ -15,6 +16,7 @@ function App() {
         <div className="page-main-container">
           <Switch>
             <Route path={routers.HOMEPAGE} exact component={HomePage} />
+            <Route path={routers.CHATPAGE} component={ChatPage} />
           </Switch>
         </div>
       </div>
