@@ -28,8 +28,10 @@ export const HomePage = () => {
                 {mainPart === "intro" &&
                     <div className="intro-section-part">
                         <div className="intro-page-intro-section">
-                            <h1 className="intro-title">Good Morning<span style={specialColorFont}>,</span><br />Dr<span style={specialColorFont}>.</span> Smith</h1>
-                            <p className="intro-description">Click on a patient on the left to view<br />their medical record</p>
+                            <div>
+                                <h1 className="intro-title">Good Morning<span style={specialColorFont}>,</span><br />Dr<span style={specialColorFont}>.</span> Smith</h1>
+                                <p className="intro-description">Click on a patient on the left to view<br />their medical record</p>
+                            </div>
                         </div>
                     </div>
                 }

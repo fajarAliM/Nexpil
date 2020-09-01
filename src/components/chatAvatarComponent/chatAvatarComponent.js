@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { GET_USER } from '../../store/actionNames';
 import './style.css';
-import { BsSearch, BsFillPlusCircleFill } from "react-icons/bs";
+import { BsSearch, BsFillPlusCircleFill, BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import { sharedColors } from '../../theme/sharedColor';
 import { users } from '../../service/users';
 
@@ -13,6 +13,8 @@ export const ChatAvatarsContainer = () => {
         color: sharedColors.primaryFontColor,
     }
     const [usersData, setUsersData] = useState(users);
+    const [arrowDirection, setArrowDirection] = useState(true);
+    const showAvatar = useRef();
 
     // select user
     const setHighlightedUser = (userItem) => {
@@ -22,15 +24,26 @@ export const ChatAvatarsContainer = () => {
             if (i === userItem) virtualArray.push({ ...usersData[i], selected: true })
         }
         setUsersData(virtualArray);
-        dispatch({ type: GET_USER, payLoad: usersData[userItem] })
+        dispatch({ type: GET_USER, payLoad: usersData[userItem] });
+        const width = window.innerWidth;
+        if (width <= 890) {
+            showAvatar.current.className = showAvatar.current.className === "avatar-main-section" ? "avatar-main-section-showed" : "avatar-main-section";
+            setArrowDirection(true);
+        }
+    }
+    const toggleAvatar = () => {
+        showAvatar.current.className = showAvatar.current.className === "avatar-main-section" ? "avatar-main-section-showed" : "avatar-main-section";
+        setArrowDirection(!arrowDirection);
     }
     return (
         <div className="avatars">
-            <div className="avatar-main-section">
+            <div className="show-avatars" onClick={() => toggleAvatar()}>
+                {arrowDirection ? <BsChevronCompactDown color="white" /> : <BsChevronCompactUp color="white" />}
+            </div>
+            <div className="avatar-main-section" ref={showAvatar}>
                 <div className="avatars-title-container">
                     <h1 className="avatars-title-text">Chat<span style={specialColorFont}>.</span></h1>
                 </div>
-
                 <div className="search-bar">
                     <BsSearch size="18px" color={sharedColors.primaryFontColor} className="search-icon" />
                     <input type="text" placeholder="Search" className="search-input" />

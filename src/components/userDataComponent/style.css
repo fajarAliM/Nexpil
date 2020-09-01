@@ -5,18 +5,18 @@
     padding-left: 27%;
     padding-bottom: 50px;
     width: 100%;
+    margin-top: 50px;
 }
 .card-container {
-    width: 66%;
+    width: 60%;
     background-color: white;
     box-shadow: 0px 3px 6px #0000001A;
     border-radius: 40px;
-    margin-top: 50px;
     padding: 35px;
     position: fixed;
 }
 .scroll-card-section {
-    margin-top: 280px;
+    margin-top: 225px;
 }
 .card-avatar-section{
     width: 100%;
@@ -31,6 +31,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50px;
+    object-fit: cover;
 }
 .user-name-container {
     display: flex;
@@ -102,7 +103,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
 }
 .pagination-title {
@@ -398,6 +398,11 @@
         width: 57%;
     }
 }
+@media only screen and (max-width: 1335px) {
+    .card-container {
+        width: 71%;
+    }
+}
 @media only screen and (max-width: 1245px) {
     .user-info-title {
         font-size: 10px;
@@ -409,5 +414,198 @@
 @media only screen and (max-width: 1200px) {
     .card-container {
         width: 70.5%;
+    }
+    .pagination-title {
+        font-size: 25px;
+    }
+    .card-title {
+        font-size: 25px;
+    }
+    .title-text {
+        font-size: 17px;
+    }
+    .title-date-text {
+        font-size: 12px;
+    }
+    .description-row-title {
+        font-size: 13px;
+    }
+    .description-row-info span {
+        font-size: 13px;
+    }
+    .description-row-info {
+        font-size: 10px;
+    }
+    .pagination-item-selected p {
+        font-size: 15px;
+    }
+    .pagination-item {
+        font-size: 15px;
+    }
+    .medical-no-report-text {
+        font-size: 21px;
+    }
+    .assigned-task-text {
+        font-size: 16px;
+    }
+    .subscribe-text {
+        font-size: 11px;
+        padding-left: 20px;
+    }
+    .doctor-notes-button-text {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .card-user-info-section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media only screen and (max-width: 1082px) {
+    .card-user-info-section {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .user-info-title {
+        text-align: right;
+    }
+    .assigned-tasks-container {
+        flex-direction: column;
+        margin-top: 0px;
+        align-items: center;
+    }
+    .assigned-task-card {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .add-button {
+        margin: 0px;
+        margin-top: 20px;
+    }
+    .pagination-section {
+        flex-direction: column;
+    }
+    .description-card {
+        width: 100%;
+    }
+    .record-data-container {
+        width: 100%;
+    }
+    .lab-result-description-section {
+        flex-direction: column;
+    }
+    .pagination-list {
+        padding: 0px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .data-container {
+        padding-left: 35%;
+    }
+    .card-container {
+        width: 63.5%;
+    }
+    .avatars {
+        width: 35%;
+    }
+    .info-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .user-name {
+        font-size: 25px;
+    }
+    .user-type {
+        font-size: 13px;
+    }
+    .card-user-avatar-image {
+        width: 60px;
+        height: 60px;
+    }
+    .show-chat-icon-container {
+        width: 40px;
+        height: 40px;
+    }
+    .chat-button {
+        width: 15px;
+        height: 15px;
+    }
+    .card-avatar-section {
+        padding-bottom: 15px;
+    }
+    .card-container {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .scroll-card-section {
+        margin-top: 240px;
+    }
+}
+@media only screen and (max-width: 985px) {
+    .note-row {
+        flex-direction: column;
+    }
+    .doctor-note-card {
+        width: 100%;
+    }
+    .discard-button {
+        margin-top: 15px;
+        width: 45%;
+    }
+    .primary-button {
+        margin-top: 15px;
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 890px) {
+    .data-container {
+        padding: 0px;
+        width: 100%;
+        align-items: center;
+        margin-top: 0px;
+    }
+    .card-container {
+        width: 100%;
+        border-radius: 0px 0px 40px 40px;
+    }
+    .scroll-card-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 890px) {
+    .user-name {
+        font-size: 18px;
+    }
+    .user-type {
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .card-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .card-title {
+        width: 100%;
+        text-align: center;
+    }
+    .pagination-title {
+        width: 100%;
+        text-align: center;
+    }
+    .assigned-task-card {
+        padding: 20px 20px;
+    }
+    .user-name-container {
+        padding-left: 12px;
+    }
+    .user-name {
+        font-size: 15px;
     }
 }

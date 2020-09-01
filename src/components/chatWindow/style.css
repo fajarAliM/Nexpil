@@ -141,3 +141,17 @@
 .sent-chat-text .chat-text {
     color: #333333;
 }
+@media only screen and (max-width: 400px) {
+    .recieved-chat-text {
+        flex: 1;
+    }
+    .sent-chat-text {
+        flex: 1;
+    }
+    .chat-text-input {
+        font-size: 12px;
+    }
+    .chat-text-send-button {
+        font-size: 14px;
+    }
+}

@@ -9,6 +9,12 @@
     width: 120px;
     height: 120px;
     border-radius: 120px;
+    object-fit: cover;
+}
+.navigator_default_dayheader {
+    font-size: 13px;
+    font-family: mediumText;
+    color: #4939E3 !important;
 }
 .chat-user-info-name {
     font-size: 32px;

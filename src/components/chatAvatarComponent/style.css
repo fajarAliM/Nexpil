@@ -53,6 +53,11 @@
     font-size: 13px;
     color: #333333;
     font-family: regularText;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100px;
+    text-align: left;
 }
 .user-avatar-selected .user-chats-text {
     margin: 0px;
@@ -61,4 +66,16 @@
     font-size: 13px;
     color: white;
     font-family: regularText;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100px;
+    text-align: left;
+}
+@media only screen and (max-width: 890px) {
+    .chat-user-info-avatar {
+        margin-top: 30px;
+        width: 100px;
+        height: 100px;
+    }
 }
