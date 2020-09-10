@@ -8,15 +8,16 @@ import { users } from '../../service/users';
 
 export const ChatAvatarsContainer = () => {
     const dispatch = useDispatch();
+    const [usersData, setUsersData] = useState(users);
+    const [arrowDirection, setArrowDirection] = useState(true);
+
     // Style for the highlighted text.
     const specialColorFont = {
         color: sharedColors.primaryFontColor,
     }
-    const [usersData, setUsersData] = useState(users);
-    const [arrowDirection, setArrowDirection] = useState(true);
     const showAvatar = useRef();
 
-    // select user
+    // Select user
     const setHighlightedUser = (userItem) => {
         let virtualArray = [];
         for (let i = 0; i < usersData.length; i++) {
@@ -31,10 +32,13 @@ export const ChatAvatarsContainer = () => {
             setArrowDirection(true);
         }
     }
+
+    // Show chat list when mobile responsive
     const toggleAvatar = () => {
         showAvatar.current.className = showAvatar.current.className === "avatar-main-section" ? "avatar-main-section-showed" : "avatar-main-section";
         setArrowDirection(!arrowDirection);
     }
+    
     return (
         <div className="avatars">
             <div className="show-avatars" onClick={() => toggleAvatar()}>

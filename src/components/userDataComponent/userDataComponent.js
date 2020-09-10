@@ -7,6 +7,8 @@ import { MedicalRecord } from './medicalRecord';
 import { LabResult } from './labResult';
 import { AssignedText } from './assignedText';
 import { DoctorNotes } from './doctorNotes';
+import { Link } from "react-router-dom";
+import { routers } from '../../config/router';
 
 export const UserDataComponent = () => {
     const currectSelectedUser = useSelector(state => state.usersSelect);
@@ -51,9 +53,11 @@ export const UserDataComponent = () => {
                         <h1 className="user-name">{currectSelectedUser.name}</h1>
                         <p className="user-type">{currectSelectedUser.type}</p>
                     </div>
-                    <div style={style} className="show-chat-icon-container">
-                        <BsChatSquareDots className="chat-button" size="24px" color="white" />
-                    </div>
+                    <Link to={routers.CHATPAGE}>
+                        <div style={style} className="show-chat-icon-container">
+                            <BsChatSquareDots className="chat-button" size="24px" color="white" />
+                        </div>
+                    </Link>
                 </div>
                 <div className="card-user-info-section">
                     {infoData && infoData.map((item, i) =>

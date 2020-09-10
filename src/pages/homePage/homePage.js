@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import './style.css';
 import { SideBar } from '../../components';
 import { AvatarsContainer } from '../../components';
 import { sharedColors } from '../../theme/sharedColor';
 import { UserDataComponent } from '../../components';
+import axios from 'axios';
 
 export const HomePage = () => {
     const [mainPart, setMainPart] = useState("intro");
@@ -17,6 +18,15 @@ export const HomePage = () => {
     const setMainSection = (part) => {
         setMainPart(part)
     }
+
+    useEffect(() => {
+
+        axios.post(`https://nexp.xyz/nexpil/task_byuser.php`)
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
+    }, [])
 
     // Get the main section states.
     const mainSectionState = useSelector(state => state.HomeReducer);

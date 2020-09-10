@@ -5,6 +5,7 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 
 export const ChatUserInfo = () => {
     const userInfo = useSelector(state => state.usersSelect);
+    
     return (
         <div className="chat-user-info-main-section">
             <img src={userInfo.url} className="chat-user-info-avatar" />

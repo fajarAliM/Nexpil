@@ -1,0 +1,94 @@
+.immunizations-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7FA;
+    border-radius: 40px;
+    margin-top: 15px;
+}
+.immunizations-data-row-container {
+    width: 90%;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.immunization-data-part {
+    width: 20%;
+    display: inline-block;
+    margin-top: 20px;
+}
+.immunization-data-title {
+    font-size: 20px;
+    font-family: boldTitles;
+    color: #333333;
+    margin: 0px;
+}
+.immunization-data-description {
+    font-size: 18px;
+    font-family: mediumText;
+    color: #333333;
+    margin: 0px;
+    margin-top: 10px;
+}
+.medication-subscription-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+.medication-every-data-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: #F7F7FA;
+    margin-bottom: 20px;
+}
+.medication-between-part {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.medication-subscription-title {
+    font-size: 20px;
+    font-family: boldTitles;
+    color: #4939E3;
+    margin: 0px;
+}
+@media only screen and (max-width: 1500px) {
+    .immunization-data-title {
+        font-size: 17px;
+    }
+    .immunization-data-description {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .immunization-data-title {
+        font-size: 15px;
+    }
+    .immunization-data-description {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .immunizations-data-row-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .immunization-data-part {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

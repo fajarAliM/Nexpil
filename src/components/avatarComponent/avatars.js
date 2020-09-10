@@ -8,12 +8,15 @@ import { users } from '../../service/users';
 
 export const AvatarsContainer = ({ setMainSection }) => {
     const dispatch = useDispatch();
+
+    // State variables
+    const [usersData, setUsersData] = useState(users);
+    const [arrowDirection, setArrowDirection] = useState(true);
+
     // Style for the highlighted text.
     const specialColorFont = {
         color: sharedColors.primaryFontColor,
     }
-    const [usersData, setUsersData] = useState(users);
-    const [arrowDirection, setArrowDirection] = useState(true);
     const showAvatar = useRef();
 
     // select user
@@ -33,10 +36,12 @@ export const AvatarsContainer = ({ setMainSection }) => {
         }
     }
 
+    // Show patients list when mobile responsive
     const toggleAvatar = () => {
         showAvatar.current.className = showAvatar.current.className === "avatar-main-section" ? "avatar-main-section-showed" : "avatar-main-section";
         setArrowDirection(!arrowDirection);
     }
+    
     return (
         <div className="avatars">
             <div className="show-avatars" onClick={() => toggleAvatar()}>

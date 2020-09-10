@@ -3,8 +3,10 @@ import './style.css';
 import { useSelector } from 'react-redux';
 
 export const LabResult = () => {
+    
     const user = useSelector(state => state.usersSelect);
     const recordInfo = user.lapResult;
+
     return (
         <div className="card-section">
             <h1 className="card-title">Lab Results</h1>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './style.css';
 import { BsFillCameraVideoFill, BsPlus } from "react-icons/bs";
+import { routers } from "../../config/router";
+import { Link } from "react-router-dom";
 
 const chatRecords = [
     {
@@ -13,7 +15,7 @@ const chatRecords = [
     }
 ]
 
-export const ChatWindow = () => {
+export const ChatWindow = ({page}) => {
     const patient = useSelector(state => state.usersSelect);
     const [chatTexts, setChatTexts] = useState(chatRecords);
 
@@ -22,11 +24,13 @@ export const ChatWindow = () => {
             <div className="chat-user-name">
                 <div className="chat-patient-name-title">
                     <p className="chat-patient-name">Elise Antoine</p>
-                    <p className="chat-user-net-state">Online</p>
+                    {!page && <p className="chat-user-net-state">Online</p>}
                 </div>
-                <div className="video-call-button">
-                    <BsFillCameraVideoFill color="white" size="15px" />
-                </div>
+                {!page && <Link to={routers.DETAIL_PAGE}>
+                    <div className="video-call-button">
+                        <BsFillCameraVideoFill color="white" size="15px" />
+                    </div>
+                </Link>}
             </div>
             <div className="chat-text-section">
                 {chatTexts.map((item, i) =>

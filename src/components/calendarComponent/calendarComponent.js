@@ -5,7 +5,6 @@ import "./style.css";
 import { BsSearch, BsFillPlusCircleFill, } from "react-icons/bs";
 import { sharedColors } from '../../theme/sharedColor';
 import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
-import ReactDOM from 'react-dom';
 
 const styles = {
   left: {

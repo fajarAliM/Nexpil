@@ -6,6 +6,7 @@ import {
   CalendarPage,
   NotificationPage,
   SettingPage,
+  UserDetailPage,
 } from './pages';
 import {
   Switch,
@@ -23,6 +24,7 @@ function App() {
             <Route path={routers.CALENDAR_PAGE} component={CalendarPage} />
             <Route path={routers.NOTIFICATION} component={NotificationPage} />
             <Route path={routers.SETTINGS} component={SettingPage} />
+            <Route path={routers.DETAIL_PAGE} component={UserDetailPage} />
           </Switch>
         </div>
       </div>
