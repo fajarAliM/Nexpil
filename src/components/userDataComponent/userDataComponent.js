@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 import { BsChatSquareDots } from "react-icons/bs";
 import { sharedColors } from '../../theme/sharedColor';
@@ -11,7 +11,10 @@ import { Link } from "react-router-dom";
 import { routers } from '../../config/router';
 
 export const UserDataComponent = () => {
+    const dispatch = useDispatch();
+
     const currectSelectedUser = useSelector(state => state.usersSelect);
+    const currentSelectedUserData = useSelector(state => state.patientSelect);
     const [infoData, setInfoData] = useState();
 
     useEffect(() => {
@@ -48,10 +51,10 @@ export const UserDataComponent = () => {
         <div className="data-container">
             <div className="card-container">
                 <div className="card-avatar-section">
-                    <img src={currectSelectedUser.url} className="card-user-avatar-image" />
+                    <img src={currentSelectedUserData.userimage} className="card-user-avatar-image" />
                     <div className="user-name-container">
-                        <h1 className="user-name">{currectSelectedUser.name}</h1>
-                        <p className="user-type">{currectSelectedUser.type}</p>
+                        <h1 className="user-name">{currentSelectedUserData.patient_name}</h1>
+                        <p className="user-type">{currentSelectedUserData.type}</p>
                     </div>
                     <Link to={routers.CHATPAGE}>
                         <div style={style} className="show-chat-icon-container">

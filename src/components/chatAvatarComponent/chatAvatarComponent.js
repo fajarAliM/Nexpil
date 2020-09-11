@@ -52,7 +52,7 @@ export const ChatAvatarsContainer = () => {
                     <BsSearch size="18px" color={sharedColors.primaryFontColor} className="search-icon" />
                     <input type="text" placeholder="Search" className="search-input" />
                 </div>
-                <div className="users-avatar">
+                <div className="users-avatar" id="avatar-scrollbar">
                     {usersData.map((user, i) =>
                         <div onClick={() => setHighlightedUser(i)} key={i} className={user.selected == false ? "user-avatar" : "user-avatar-selected"}>
                             <img className="avatar-image" src={user.url} />

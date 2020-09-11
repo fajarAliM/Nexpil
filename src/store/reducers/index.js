@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
 
-import { HomeReducer } from './homeReducers';
-import { usersSelect } from './usersReducers';
+import { usersSelect, patientsList, patientSelect, patientPersonalInfo } from './usersReducers';
 
 export default combineReducers({
-    HomeReducer,
     usersSelect,
+    patientsList,
+    patientSelect,
+    patientPersonalInfo,
 })

@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 import { SideBar } from '../../components';
 import { AvatarsContainer } from '../../components';
 import { sharedColors } from '../../theme/sharedColor';
 import { UserDataComponent } from '../../components';
+import { GET_PATIENTS_LIST } from '../../store/actionNames/homePageActions';
 import axios from 'axios';
 
 export const HomePage = () => {
     const [mainPart, setMainPart] = useState("intro");
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch({ type: GET_PATIENTS_LIST });
+    }, []);
+
+
     // Style for the highlighted text color.
     const specialColorFont = {
         color: sharedColors.primaryFontColor,
@@ -19,17 +27,6 @@ export const HomePage = () => {
         setMainPart(part)
     }
 
-    useEffect(() => {
-
-        axios.post(`https://nexp.xyz/nexpil/task_byuser.php`)
-            .then(res => {
-                console.log(res);
-                console.log(res.data);
-            })
-    }, [])
-
-    // Get the main section states.
-    const mainSectionState = useSelector(state => state.HomeReducer);
     return (
         <div className="intro-page-container">
             <SideBar select={"home"} />
