@@ -5,10 +5,10 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 
 export const ChatUserInfo = () => {
     const userInfo = useSelector(state => state.usersSelect);
-    
+
     return (
         <div className="chat-user-info-main-section">
-            <img src={userInfo.url} className="chat-user-info-avatar" />
+            <img src={userInfo.url} className="chat-user-info-avatar" alt="user avatar" />
             <h1 className="chat-user-info-name">{userInfo.name}</h1>
             <div className="chat-user-info-row">
                 <p className="chat-user-info-row-title">Age:</p>
@@ -16,19 +16,21 @@ export const ChatUserInfo = () => {
             </div>
             <div className="chat-user-info-row">
                 <p className="chat-user-info-row-title">D.O.B:</p>
-    <p className="chat-user-info-row-description">{userInfo.birthday}</p>
+                <p className="chat-user-info-row-description">{userInfo.birthday}</p>
             </div>
             <div className="chat-user-info-row">
                 <p className="chat-user-info-row-title">Allergies:</p>
-    <p className="chat-user-info-row-description">{userInfo.allergies}</p>
+                <p className="chat-user-info-row-description">{userInfo.allergies}</p>
             </div>
             <div className="chat-user-info-row">
                 <p className="chat-user-info-row-title">Medication:</p>
                 <p className="chat-user-info-row-description">
                     <div className="medication-row">
-                        {userInfo.medication.map((item, i) => 
+                        
+                        {userInfo.medication.map((item, i) =>
                             <p key={i} className="medication-row-text">{item}</p>
                         )}
+
                     </div>
                 </p>
             </div>

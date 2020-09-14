@@ -7,6 +7,7 @@
     border-radius: 40px;
     margin-top: 15px;
 }
+
 .immunizations-data-row-container {
     width: 90%;
     display: inline-block;
@@ -18,12 +19,14 @@
     display: inline-block;
     margin-top: 20px;
 }
+
 .immunization-data-title {
     font-size: 20px;
     font-family: boldTitles;
     color: #333333;
     margin: 0px;
 }
+
 .immunization-data-description {
     font-size: 18px;
     font-family: mediumText;
@@ -31,6 +34,7 @@
     margin: 0px;
     margin-top: 10px;
 }
+
 .medication-subscription-container {
     width: 100%;
     display: flex;
@@ -39,6 +43,7 @@
     margin-top: 15px;
     flex-direction: column;
 }
+
 .medication-every-data-card {
     width: 100%;
     display: flex;
@@ -50,6 +55,7 @@
     background-color: #F7F7FA;
     margin-bottom: 20px;
 }
+
 .medication-between-part {
     width: 50%;
     display: flex;
@@ -57,33 +63,40 @@
     align-items: flex-start;
     justify-content: center;
 }
+
 .medication-subscription-title {
     font-size: 20px;
     font-family: boldTitles;
     color: #4939E3;
     margin: 0px;
 }
+
 @media only screen and (max-width: 1500px) {
     .immunization-data-title {
         font-size: 17px;
     }
+
     .immunization-data-description {
         font-size: 15px;
     }
 }
+
 @media only screen and (max-width: 1500px) {
     .immunization-data-title {
         font-size: 15px;
     }
+
     .immunization-data-description {
         font-size: 13px;
     }
 }
+
 @media only screen and (max-width: 640px) {
     .immunizations-data-row-container {
         display: flex;
         flex-direction: column;
     }
+    
     .immunization-data-part {
         width: 100%;
         display: flex;

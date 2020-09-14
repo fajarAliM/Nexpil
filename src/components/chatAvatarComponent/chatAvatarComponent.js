@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { GET_USER } from '../../store/actionNames';
 import './style.css';
-import { BsSearch, BsFillPlusCircleFill, BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
+import { BsSearch, BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import { sharedColors } from '../../theme/sharedColor';
 import { users } from '../../service/users';
 
@@ -10,12 +10,12 @@ export const ChatAvatarsContainer = () => {
     const dispatch = useDispatch();
     const [usersData, setUsersData] = useState(users);
     const [arrowDirection, setArrowDirection] = useState(true);
+    const showAvatar = useRef();
 
     // Style for the highlighted text.
     const specialColorFont = {
         color: sharedColors.primaryFontColor,
     }
-    const showAvatar = useRef();
 
     // Select user
     const setHighlightedUser = (userItem) => {
@@ -53,6 +53,7 @@ export const ChatAvatarsContainer = () => {
                     <input type="text" placeholder="Search" className="search-input" />
                 </div>
                 <div className="users-avatar" id="avatar-scrollbar">
+                    
                     {usersData.map((user, i) =>
                         <div onClick={() => setHighlightedUser(i)} key={i} className={user.selected == false ? "user-avatar" : "user-avatar-selected"}>
                             <img className="avatar-image" src={user.url} />
@@ -70,6 +71,7 @@ export const ChatAvatarsContainer = () => {
                             </div>
                         </div>
                     )}
+                    
                 </div>
             </div>
         </div>

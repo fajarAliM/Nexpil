@@ -16,31 +16,33 @@ export const UserDataComponent = () => {
     const currectSelectedUser = useSelector(state => state.usersSelect);
     const currentSelectedUserData = useSelector(state => state.patientSelect);
     const [infoData, setInfoData] = useState();
+    const patientDetailData = useSelector(state => state.patientPersonalInfo);
 
     useEffect(() => {
+        console.log("user data component patient info", patientDetailData);
         const userInfo = [
             {
                 title: "Date of Birth",
-                info: currectSelectedUser.birthday,
+                info: patientDetailData.dob,
             }, {
                 title: "Age",
-                info: currectSelectedUser.age,
+                info: patientDetailData.age,
             }, {
                 title: "Phone Number",
-                info: currectSelectedUser.phoneNumber,
+                info: patientDetailData.phone_number,
             }, {
                 title: "Street Address",
-                info: currectSelectedUser.address,
+                info: patientDetailData.street_address,
             }, {
                 title: "City, State",
-                info: currectSelectedUser.cityState,
+                info: `${patientDetailData.city}${patientDetailData.state}`,
             }, {
                 title: "Zip Code",
-                info: currectSelectedUser.zip,
+                info: patientDetailData.zipcode,
             },
         ];
         setInfoData(userInfo);
-    }, [])
+    }, [patientDetailData])
     console.log('user info', infoData)
 
     // Style for primary color button
@@ -63,12 +65,14 @@ export const UserDataComponent = () => {
                     </Link>
                 </div>
                 <div className="card-user-info-section">
+                    
                     {infoData && infoData.map((item, i) =>
                         <div className="info-section">
                             <p className="user-info-title">{item.title}</p>
                             <p className="user-info-description">{item.info}</p>
                         </div>
                     )}
+
                 </div>
             </div>
             <div className="scroll-card-section">

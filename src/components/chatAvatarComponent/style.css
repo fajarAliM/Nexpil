@@ -3,18 +3,21 @@
     flex-direction: column;
     align-items: center;
 }
+
 .chat-date-selected {
     font-size: 12px;
     font-family: mediumText;
     color: white;
     margin: 0px;
 }
+
 .chat-date {
     font-size: 12px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
 }
+
 .chat-number {
     width: 20px;
     height: 20px;
@@ -26,11 +29,13 @@
     align-items: center;
     margin-top: 5px;
 }
+
 .chat-number p {
     font-size: 10px;
     color: white;
     margin: 0px;
 }
+
 .chat-number-selected {
     width: 20px;
     height: 20px;
@@ -41,11 +46,13 @@
     align-items: center;
     margin-top: 5px;
 }
+
 .chat-number-selected p {
     font-size: 10px;
     color: white;
     margin: 0px;
 }
+
 .user-avatar .user-chats-text {
     margin: 0px;
     text-align: left;
@@ -59,6 +66,7 @@
     width: 100px;
     text-align: left;
 }
+
 .user-avatar-selected .user-chats-text {
     margin: 0px;
     text-align: left;
@@ -72,6 +80,7 @@
     width: 100px;
     text-align: left;
 }
+
 @media only screen and (max-width: 890px) {
     .chat-user-info-avatar {
         margin-top: 30px;

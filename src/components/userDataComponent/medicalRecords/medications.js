@@ -28,6 +28,7 @@ const medicationData = [
 export const Medications = () => {
     return (
         <div className="medication-subscription-container">
+            
             {medicationData.map((item, i) =>
                 <div className="medication-every-data-card">
                     <div className="medication-between-part">
@@ -40,6 +41,7 @@ export const Medications = () => {
                     </div>
                 </div>
             )}
+            
         </div>
     )
 }

@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './style.css';
 import { SideBar } from '../../components';
 import { AvatarsContainer } from '../../components';
 import { sharedColors } from '../../theme/sharedColor';
 import { UserDataComponent } from '../../components';
 import { GET_PATIENTS_LIST } from '../../store/actionNames/homePageActions';
-import axios from 'axios';
 
 export const HomePage = () => {
-    const [mainPart, setMainPart] = useState("intro");
     const dispatch = useDispatch();
 
+    const [mainPart, setMainPart] = useState("intro");
+
+    // Dispatch the action for get patient list before components mounted
     useEffect(() => {
         dispatch({ type: GET_PATIENTS_LIST });
     }, []);
@@ -32,6 +33,7 @@ export const HomePage = () => {
             <SideBar select={"home"} />
             <div className="main-section">
                 <AvatarsContainer setMainSection={setMainSection} />
+
                 {mainPart === "intro" &&
                     <div className="intro-section-part">
                         <div className="intro-page-intro-section">
@@ -42,6 +44,7 @@ export const HomePage = () => {
                         </div>
                     </div>
                 }
+
                 {mainPart !== "intro" &&
                     <UserDataComponent />
                 }

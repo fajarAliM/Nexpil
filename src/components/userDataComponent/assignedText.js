@@ -45,12 +45,15 @@ export const AssignedText = () => {
                 <div className="assigned-task-card">
                     <p className="assigned-task-text">Schedule a Blood Test</p>
                 </div>
+               
                 {visibleAddSection === false &&
                     <div className="add-button" onClick={() => showAddSection()}>
                         <p className="assigned-task-text">Add New Task</p>
                     </div>
                 }
+                
             </div>
+            
             {visibleAddSection === true &&
                 <div className="add-section">
                     <div className="add-section-title-row">
@@ -83,6 +86,7 @@ export const AssignedText = () => {
                     </div>
                 </div>
             }
+
         </div>
     )
 }

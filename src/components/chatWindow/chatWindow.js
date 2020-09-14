@@ -33,14 +33,16 @@ export const ChatWindow = ({page}) => {
                 </Link>}
             </div>
             <div className="chat-text-section">
+               
                 {chatTexts.map((item, i) =>
-                    <div className={item.key === "recieved" ? "chat-text-recieved" : "chat-text-sent"}>
+                    <div key={i} className={item.key === "recieved" ? "chat-text-recieved" : "chat-text-sent"}>
                         <img src={patient.url} className="chat-avatar-image" />
                         <div className={item.key === "recieved" ? "recieved-chat-text" : "sent-chat-text"}>
                             <p className="chat-text">{item.text}</p>
                         </div>
                     </div>
                 )}
+
             </div>
             <div className="chat-text-input-section">
                 <div className="chat-text-input-plus-button">

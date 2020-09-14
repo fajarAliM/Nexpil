@@ -6,7 +6,6 @@ import { BsSearch, BsFillPlusCircleFill, BsChevronCompactDown, BsChevronCompactU
 import { sharedColors } from '../../theme/sharedColor';
 import { users } from '../../service/users';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from 'react-loader-spinner';
 
 export const AvatarsContainer = ({ setMainSection }) => {
     const dispatch = useDispatch();
@@ -18,9 +17,7 @@ export const AvatarsContainer = ({ setMainSection }) => {
 
     // Set usersData to data from server
     useEffect(() => {
-        setTimeout(() => {
             setUsersData(patientList)
-        }, 3000);
     }, [patientList]);
 
     // Style for the highlighted text.
@@ -41,8 +38,8 @@ export const AvatarsContainer = ({ setMainSection }) => {
         if (setMainSection) setMainSection("userData");
 
         dispatch({ type: GET_USER, payLoad: users[userItem] });
-        dispatch({type: SET_PATIENT_SELECTED, payLoad: usersData[userItem]});
-        dispatch({type: GET_PATIENT_PERSONAL_DATA, payLoad: usersData[userItem].id})
+        dispatch({ type: SET_PATIENT_SELECTED, payLoad: usersData[userItem] });
+        dispatch({ type: GET_PATIENT_PERSONAL_DATA, payLoad: usersData[userItem].id })
 
         const width = window.innerWidth;
         if (width <= 890) {
@@ -58,46 +55,36 @@ export const AvatarsContainer = ({ setMainSection }) => {
     }
 
     return (
-        <>
-            {!usersData &&
-                <div className="avatars-loader-spinner-container">
-                    <Loader
-                        type="Puff"
-                        color="#00BFFF"
-                        height={100}
-                        width={100}
-                        timeout={20000}
-
-                    />
+        <div className="avatars">
+            <div className="show-avatars" onClick={() => toggleAvatar()}>
+                
+                {arrowDirection ? <BsChevronCompactDown color="white" /> : <BsChevronCompactUp color="white" />}
+                
+            </div>
+            <div className="avatar-main-section" ref={showAvatar}>
+                <div className="avatars-title-container">
+                    <h1 className="avatars-title-text">Patients<span style={specialColorFont}>.</span></h1>
+                    <BsFillPlusCircleFill color={sharedColors.primaryButtonsColor} className="avatars-title-add-button" />
                 </div>
-            }
-            {usersData && <div className="avatars">
-                <div className="show-avatars" onClick={() => toggleAvatar()}>
-                    {arrowDirection ? <BsChevronCompactDown color="white" /> : <BsChevronCompactUp color="white" />}
-                </div>
-                <div className="avatar-main-section" ref={showAvatar}>
-                    <div className="avatars-title-container">
-                        <h1 className="avatars-title-text">Patients<span style={specialColorFont}>.</span></h1>
-                        <BsFillPlusCircleFill color={sharedColors.primaryButtonsColor} className="avatars-title-add-button" />
-                    </div>
 
-                    <div className="search-bar">
-                        <BsSearch size="18px" color={sharedColors.primaryFontColor} className="search-icon" />
-                        <input type="text" placeholder="Search" className="search-input" />
-                    </div>
-                    <div className="users-avatar" id="avatar-scrollbar">
-                        {usersData && usersData.map((user, i) =>
-                            <div onClick={() => setHighlightedUser(i)} key={i} className={user.selected == false ? "user-avatar" : "user-avatar-selected"}>
-                                <img className="avatar-image" src={user.userimage} />
-                                <div className="user-info">
-                                    <p className="user-name-text">{user.patient_name}</p>
-                                    <p className="user-type-text">{user.type}</p>
-                                </div>
+                <div className="search-bar">
+                    <BsSearch size="18px" color={sharedColors.primaryFontColor} className="search-icon" />
+                    <input type="text" placeholder="Search" className="search-input" />
+                </div>
+                <div className="users-avatar" id="avatar-scrollbar">
+                   
+                    {usersData && usersData.map((user, i) =>
+                        <div onClick={() => setHighlightedUser(i)} key={i} className={user.selected == false ? "user-avatar" : "user-avatar-selected"}>
+                            <img className="avatar-image" src={user.userimage} />
+                            <div className="user-info">
+                                <p className="user-name-text">{user.patient_name}</p>
+                                <p className="user-type-text">{user.type}</p>
                             </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
+
                 </div>
-            </div>}
-        </>
+            </div>
+        </div>
     )
 }

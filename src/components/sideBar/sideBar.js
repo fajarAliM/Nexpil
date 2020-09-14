@@ -42,8 +42,8 @@ export const SideBar = ({select}) => {
 
     const [navMenu, setNavMenu] = useState(navIcons);
     const [selectedTab, setSelectedTab] = useState();
-    const [sideBarTitle, setSideBarTitle] = useState("nexpil");
-    const windowWidth = window.innerWidth;
+
+    // Set selected tab icon highlihgt when selectedTab changes
     useEffect(() => {
         setSelectedTab(select)
     }, [select]);
@@ -54,8 +54,8 @@ export const SideBar = ({select}) => {
             <h1 className="side-bar-reduced-title">n<span style={specialColorFont}>.</span></h1>
             <div className="navigation-icons-container">
                 {navMenu.map((item, i) =>
-                    <Link className="navigation-icons-row" to={item.route}>
-                        <div id={item.id} key={i} className={item.id !== selectedTab ? "navigation-icon-none-selected" : "navigation-icon-selected"}>
+                    <Link key={i} className="navigation-icons-row" to={item.route}>
+                        <div id={item.id} className={item.id !== selectedTab ? "navigation-icon-none-selected" : "navigation-icon-selected"}>
                             {item.element}
                             <p className="navigation-icons-name">{item.name}</p>
                         </div>

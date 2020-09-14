@@ -7,6 +7,7 @@
     width: 100%;
     margin-top: 50px;
 }
+
 .card-container {
     width: 60%;
     background-color: white;
@@ -15,9 +16,11 @@
     padding: 35px;
     position: fixed;
 }
+
 .scroll-card-section {
     margin-top: 225px;
 }
+
 .card-avatar-section{
     width: 100%;
     display: flex;
@@ -27,12 +30,14 @@
     padding-bottom: 30px;
     border-bottom: 2px solid #4939E3;
 }
+
 .card-user-avatar-image {
     width: 80px;
     height: 80px;
     border-radius: 50px;
     object-fit: cover;
 }
+
 .user-name-container {
     display: flex;
     flex-direction: column;
@@ -40,18 +45,21 @@
     flex: 1;
     padding-left: 30px;
 }
+
 .user-name {
     font-family: mediumText;
     font-size: 35px;
     color: #333333;
     margin: 0px;
 }
+
 .user-type {
     font-family: regularText;
     font-size: 21px;
     color: #333333;
     margin: 0px;
 }
+
 .show-chat-icon-container {
     width: 60px;
     height: 60px;
@@ -62,6 +70,7 @@
     align-items: center;
     cursor: pointer;
 }
+
 .card-user-info-section {
     padding-left: 44px;
     padding-right: 44px;
@@ -71,10 +80,12 @@
     align-items: center;
     padding-top: 20px;
 }
+
 .info-section {
     display: flex;
     flex-direction: column;
 }
+
 .user-info-title {
     font-size: 12px;
     font-family: regularText;
@@ -82,6 +93,7 @@
     margin: 0px;
     color: #707070;
 }
+
 .user-info-description {
     font-size: 15px;
     font-family: mediumText;
@@ -89,6 +101,7 @@
     margin: 0px;
     color: #333333;
 }
+
 .card-section {
     width: 97%;
     background-color: white;
@@ -99,12 +112,14 @@
     display: flex;
     flex-direction: column;
 }
+
 .pagination-section {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .pagination-title {
     font-size: 35px;
     font-family: mediumText;
@@ -112,6 +127,7 @@
     font-weight: 300;
     margin: 0px;
 }
+
 .pagination-list {
     width: 50%;
     display: flex;
@@ -119,6 +135,7 @@
     justify-content: space-evenly;
     margin: 0px;
 }
+
 .pagination-item {
     list-style: none;
     font-size: 20px;
@@ -127,6 +144,7 @@
     padding-bottom: 10px;
     cursor: pointer;
 }
+
 .pagination-item-selected {
     list-style: none;
     font-size: 20px;
@@ -135,15 +153,18 @@
     cursor: pointer;
     color: #4939E3;
 }
+
 .pagination-item-selected p{
     margin-bottom: 10px;
 }
+
 .bottom-border {
     width: 100%;
     height: 5px;
     background: linear-gradient(to right, #877CEC, #4939E3);
     border-radius: 100px;
 }
+
 .medical-no-report {
     width: 100%;
     height: 130px;
@@ -154,11 +175,13 @@
     border-radius: 40px;
     margin-top: 15px;
 }
+
 .medical-no-report-text {
     font-size: 25px;
     font-family: boldTitles;
     color: #969696;
 }
+
 .card-title {
     font-size: 35px;
     margin: 0px;
@@ -168,6 +191,7 @@
     font-weight: 300;
     width: 100%;
 }
+
 .lab-result-description-section {
     width: 100%;
     display: flex;
@@ -175,6 +199,7 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .description-card {
     padding: 30px 50px;
     background-color: #F7F7FA;
@@ -182,6 +207,7 @@
     border-radius: 37px;
     margin-top: 30px;
 }
+
 .title-section {
     width: 100%;
     display: flex;
@@ -191,18 +217,21 @@
     padding-bottom: 10px;
     border-bottom: 3px solid #4939E3;
 }
+
 .title-text {
     font-size: 23px;
     font-family: mediumText;
     color: #4939E3;
     margin: 0px;
 }
+
 .title-date-text {
     font-size: 18px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
 }
+
 .description-row {
     width: 100%;
     display: flex;
@@ -211,29 +240,34 @@
     align-items: center;
     padding-top: 20px;
 }
+
 .description-row-title {
     font-size: 17px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
 }
+
 .description-row-info {
     font-size: 15px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
 }
+
 .description-row-info span{
     font-size: 18px;
     font-family: mediumText;
     color: #333333;
     margin: 0px;
 }
+
 .record-data-container {
     display: flex;
     flex-direction: column;
     width: 48%;
 }
+
 .description-card-rigth-side {
     padding: 30px 50px;
     background-color: #F7F7FA;
@@ -241,6 +275,7 @@
     border-radius: 37px;
     margin-top: 30px;
 }
+
 .assigned-tasks-container {
     width: 100%;
     margin-top: 30px;
@@ -248,6 +283,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .assigned-task-card {
     background-color: #F7F7FA;
     padding: 20px 40px;
@@ -259,6 +295,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .assigned-task-text {
     font-size: 20px;
     font-family: mediumText;
@@ -266,6 +303,7 @@
     margin: 0px;
     white-space: nowrap;
 }
+
 .subscribe-text {
     font-size: 15px;
     font-family: mediumText;
@@ -274,6 +312,7 @@
     white-space: nowrap;
     padding-left: 30px;
 }
+
 .add-button {
     padding: 20px 40px;
     box-shadow: 0px 3px 6px #0000001A;
@@ -287,6 +326,7 @@
     margin-left: 20px;
     cursor: pointer;
 }
+
 .note-row {
     width: 100%;
     display: flex;
@@ -295,6 +335,7 @@
     align-items: center;
     margin-top: 20px;
 }
+
 .doctor-note-card {
     background-color: #F7F7FA;
     padding: 20px 40px;
@@ -306,6 +347,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .discard-button {
     background: linear-gradient(to right, #EC877C, #E34939);
     padding: 10px 0px;
@@ -319,6 +361,7 @@
     cursor: pointer;
     width: 15%;
 }
+
 .doctor-notes-button-text {
     color: white;
     font-family: mediumText;
@@ -326,6 +369,7 @@
     margin: 0px;
     cursor: pointer;
 }
+
 .primary-button {
     background: linear-gradient(to right, #877CEC, #4939E3);
     padding: 10px 0px;
@@ -339,12 +383,14 @@
     height: 50px;
     width: 17%;
 }
+
 .add-section {
     width: 100%;
     margin-top: 40px;
     border-top: 2px solid #4939E3;
     padding-top: 50px;
 }
+
 .add-section-title-row {
     width: 100%;
     display: flex;
@@ -352,6 +398,7 @@
     justify-content: space-between;
     align-items: flex-end;
 }
+
 .add-section-title-title-text {
     font-size: 30px;
     color: #333333;
@@ -359,6 +406,7 @@
     margin: 0px;
     font-weight: 300;
 }
+
 .add-section-cancel-text {
     font-size: 20px;
     color: #E34939;
@@ -367,6 +415,7 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
 .add-section-description {
     font-size: 20px;
     font-family: regularText;
@@ -375,6 +424,7 @@
     margin-top: 30px;
     line-height: 40px;
 }
+
 .add-section-switch-row {
     width: 100%;
     display: flex;
@@ -382,6 +432,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .add-section-switch {
     width: 70%;
     height: 50px;
@@ -393,6 +444,7 @@
     flex-direction: row;
     align-items: center;
 }
+
 .switch-option {
     width: 50%;
     height: 100%;
@@ -402,6 +454,7 @@
     align-items: center;
     color: #333333;
 }
+
 .switch-option-selected {
     width: 50%;
     height: 98%;
@@ -413,11 +466,13 @@
     background: linear-gradient(to right, #877CEC, #4939E3);
     color: white;
 }
+
 .option-text {
     font-size: 20px;
     font-family: mediumText;
     margin: 0px;
 }
+
 .add-input-section {
     width: 100%;
     padding: 25px;
@@ -425,6 +480,7 @@
     background-color: #F7F7FA;
     margin-top: 30px;
 }
+
 .input-row {
     width: 100%;
     display: flex;
@@ -432,6 +488,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .add-buttons {
     width: 35%;
     height: 50px;
@@ -445,12 +502,14 @@
     padding-left: 20px;
     cursor: pointer;
 }
+
 .add-buttons-text {
     font-size: 18px;
     font-family: mediumText;
     color: #AFAFAF;
     margin: 0px;
 }
+
 .save-task-button {
     width: 25%;
     height: 50px;
@@ -463,225 +522,308 @@
     cursor: pointer;
     color: #F7F7FA;
 }
+
 .save-task-button p {
     font-size: 18px;
     font-family: mediumText;
     margin: 0px;
 }
 
-
 @media only screen and (max-width: 1500px) {
     .user-info-title {
         font-size: 11px;
     }
+
+    .card-container {
+        width: 66%;
+    }
+
     .card-user-avatar-image {
         width: 70px;
         height: 70px;
     }
+
     .user-name {
         font-size: 30px;
     }
+
     .user-type {
         font-size: 17px;
     }
+
     .show-chat-icon-container {
         width: 50px;
         height: 50px;
     }
+
     .pagination-title {
         font-size: 30px;
     }
+
     .pagination-item {
         font-size: 17px;
     }
+
     .pagination-item-selected p {
         font-size: 17px;
     }
+
     .card-title {
         font-size: 30px;
     }
+
     .title-text {
         font-size: 20px;
     }
+
     .title-date-text {
         font-size: 15px;
     }
+
     .description-row-title {
         font-size: 16px;
     }
+
     .description-row-info span {
         font-size: 16px;
     }
+
     .description-row-info {
         font-size: 13px;
     }
 }
+
 @media only screen and (max-width: 1430px) {
     .assigned-task-text {
         font-size: 18px;
     }
+
     .subscribe-text {
         font-size: 13px;
     }
 }
+
 @media only screen and (max-width: 1330px) {
     .pagination-list {
         width: 57%;
     }
 }
+
 @media only screen and (max-width: 1335px) {
     .card-container {
         width: 71%;
     }
 }
+
 @media only screen and (max-width: 1245px) {
     .user-info-title {
         font-size: 10px;
     }
+
     .user-info-description {
         font-size: 14px;
     }
 }
+
 @media only screen and (max-width: 1200px) {
     .card-container {
         width: 70.5%;
     }
+
+    .add-section-title-title-text {
+        font-size: 25px;
+    }
+
+    .add-section-description {
+        font-size: 16px;
+    }
+
+    .option-text {
+        font-size: 16px;
+    }
+
+    .add-buttons-text {
+        font-size: 15px;
+    }
+
+    .save-task-button p {
+        font-size: 15px;
+    }
+
     .pagination-title {
         font-size: 25px;
     }
+
     .card-title {
         font-size: 25px;
     }
+
     .title-text {
         font-size: 17px;
     }
+
     .title-date-text {
         font-size: 12px;
     }
+
     .description-row-title {
         font-size: 13px;
     }
+
     .description-row-info span {
         font-size: 13px;
     }
+
     .description-row-info {
         font-size: 10px;
     }
+
     .pagination-item-selected p {
         font-size: 15px;
     }
+
     .pagination-item {
         font-size: 15px;
     }
+
     .medical-no-report-text {
         font-size: 21px;
     }
+
     .assigned-task-text {
         font-size: 16px;
     }
+
     .subscribe-text {
         font-size: 11px;
         padding-left: 20px;
     }
+
     .doctor-notes-button-text {
         font-size: 18px;
     }
 }
+
 @media only screen and (max-width: 1200px) {
     .card-user-info-section {
         padding-left: 0px;
         padding-right: 0px;
     }
 }
+
 @media only screen and (max-width: 1082px) {
     .card-user-info-section {
         flex-direction: column;
         align-items: flex-end;
     }
+
     .user-info-title {
         text-align: right;
     }
+
     .assigned-tasks-container {
-        flex-direction: column;
+        flex-direction: column !important;
         margin-top: 0px;
         align-items: center;
     }
+
     .assigned-task-card {
         margin-top: 20px;
         width: 100%;
     }
+
     .add-button {
         margin: 0px;
         margin-top: 20px;
     }
+
     .pagination-section {
         flex-direction: column;
     }
+
     .description-card {
         width: 100%;
     }
+
     .record-data-container {
         width: 100%;
     }
+
     .lab-result-description-section {
         flex-direction: column;
     }
+
     .pagination-list {
         padding: 0px;
         width: 100%;
         justify-content: space-evenly;
     }
+
     .data-container {
         padding-left: 35%;
     }
+
     .card-container {
         width: 63.5%;
     }
+
     .avatars {
         width: 35%;
     }
+
     .info-section {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         width: 100%;
     }
+
     .user-name {
         font-size: 25px;
     }
+
     .user-type {
         font-size: 13px;
     }
+
     .card-user-avatar-image {
         width: 60px;
         height: 60px;
     }
+
     .show-chat-icon-container {
         width: 40px;
         height: 40px;
     }
+
     .chat-button {
         width: 15px;
         height: 15px;
     }
+
     .card-avatar-section {
         padding-bottom: 15px;
     }
+
     .card-container {
         padding-bottom: 20px;
         padding-top: 20px;
     }
+
     .scroll-card-section {
         margin-top: 240px;
     }
 }
+
 @media only screen and (max-width: 985px) {
     .note-row {
         flex-direction: column;
     }
+
     .doctor-note-card {
         width: 100%;
     }
+
     .discard-button {
         margin-top: 15px;
         width: 45%;
@@ -691,6 +833,7 @@
         width: 45%;
     }
 }
+
 @media only screen and (max-width: 890px) {
     .data-container {
         padding: 0px;
@@ -698,10 +841,12 @@
         align-items: center;
         margin-top: 0px;
     }
+
     .card-container {
         width: 100%;
         border-radius: 0px 0px 40px 40px;
     }
+
     .scroll-card-section {
         width: 100%;
         display: flex;
@@ -709,33 +854,41 @@
         align-items: center;
     }
 }
+
 @media only screen and (max-width: 890px) {
     .user-name {
         font-size: 18px;
     }
+
     .user-type {
         font-size: 11px;
     }
 }
+
 @media only screen and (max-width: 400px) {
     .card-section {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .card-title {
         width: 100%;
         text-align: center;
     }
+
     .pagination-title {
         width: 100%;
         text-align: center;
     }
+
     .assigned-task-card {
         padding: 20px 20px;
     }
+
     .user-name-container {
         padding-left: 12px;
     }
+    
     .user-name {
         font-size: 15px;
     }

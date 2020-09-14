@@ -2,6 +2,9 @@ import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import * as initialActions from '../store/actionNames/homePageActions';
 import axios from 'axios';
 
+/* These are saga functions for patient page. */
+
+
 function* getSelectedUser(action) {
    try {
       yield put({type: "GET_SELECTED_USER", payLoad: action.payLoad});
@@ -10,17 +13,22 @@ function* getSelectedUser(action) {
    }
 }
 
-// API get data functions
+/* --------- API get data functions ----------- */
+
+// Get patients list API
 function result(endPointURL) {
     return axios.post('https://nexp.xyz/nexpil/' + endPointURL)
 }
 
+// Get patients informations API
 function getPatientPersonalInfoAPI(patientID) {
-    return axios.post('https://nexp.xyz/nexpil/patient-info.php?patient_id=' + patientID + '&action=patient_header'); 
+    return axios.post('https://nexp.xyz/nexpil/patient-info.php?patient_id=' + patientID); 
 }
 
 
-// Call and dispatch functions
+/* ----------- Call and dispatch functions ------------- */
+
+// Get full patients list
 function* getPatientsList() {
     try {
         const patients = yield call(result, "patients.php");
@@ -30,6 +38,7 @@ function* getPatientsList() {
     }
 }
 
+// Get selected patient from patient list
 function* setPatientSelected(action) {
     try {
         yield put({type: 'SET_SELECTED_PATIENT', payLoad: action.payLoad});
@@ -38,6 +47,7 @@ function* setPatientSelected(action) {
     }
 }
 
+// Get selected patient informations
 function* getPatientPersonalInfo(action) {
     try {
         const patientPersonalInfo = yield call(getPatientPersonalInfoAPI, action.payLoad);

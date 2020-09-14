@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
-import { 
+import {
     Allerges,
-    Immunizations, 
+    Immunizations,
     Medications,
 } from './medicalRecords';
 
@@ -26,6 +26,7 @@ export const MedicalRecord = () => {
     const [paginationData, setPaginationData] = useState(paginationList);
     const [paginationPage, setPaginationPage] = useState("allergies");
 
+    // Section pagination function
     const setCurrentSelected = (selectedNumber) => {
         let virtualArray = [];
         for (let i = 0; i < paginationData.length; i++) {
@@ -35,7 +36,7 @@ export const MedicalRecord = () => {
         setPaginationData(virtualArray)
         setPaginationPage(paginationList[selectedNumber].paginationTogggle);
     }
-    
+
     return (
         <div className="card-section">
             <div className="pagination-section">
@@ -49,15 +50,19 @@ export const MedicalRecord = () => {
                     )}
                 </ul>
             </div>
+
             {paginationPage === "allergies" &&
                 <Allerges />
             }
+
             {paginationPage === "immunization" &&
                 <Immunizations />
             }
+
             {paginationPage === "medications" &&
                 <Medications />
             }
+
         </div>
     )
 }
