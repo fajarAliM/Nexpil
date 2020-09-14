@@ -12,7 +12,7 @@ export const HomePage = () => {
 
     const [mainPart, setMainPart] = useState("intro");
 
-    // Dispatch the action for get patient list before components mounted
+    // Dispatch the action for get patient list after components mounted
     useEffect(() => {
         dispatch({ type: GET_PATIENTS_LIST });
     }, []);

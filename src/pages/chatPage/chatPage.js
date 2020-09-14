@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import './style.css';
 import { SideBar } from '../../components';
 import { ChatAvatarsContainer } from '../../components';
 import { ChatWindow } from '../../components';
-import { ChatUserInfo } from '../../components'
+import { ChatUserInfo } from '../../components';
+import { GET_PATIENTS_LIST } from '../../store/actionNames/homePageActions';
 
 export const ChatPage = () => {
+    const dispatch = useDispatch();
+   
+    // Dispatch the action for get patient list after components mounted
+    useEffect(() => {
+        dispatch({ type: GET_PATIENTS_LIST });
+    }, []);
+
     return (
         <div className="chat-page-container">
             <SideBar select={"chat"} />

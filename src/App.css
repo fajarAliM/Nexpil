@@ -28,4 +28,5 @@
 
 * {
   box-sizing: border-box;
+  transition-duration: 0.4s;
 }

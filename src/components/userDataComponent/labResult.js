@@ -18,7 +18,7 @@ export const LabResult = () => {
                     </div>
                    
                     {recordInfo.bloodTest.map((item, i) =>
-                        <div className="description-row">
+                        <div key={i} className="description-row">
                             <p className="description-row-title">{item.title}</p>
                             <p className="description-row-info"><span>{item.info.amount}</span>&nbsp;{item.info.unit}</p>
                         </div>
@@ -32,7 +32,7 @@ export const LabResult = () => {
                         </div>
                         
                         {recordInfo.xRays.map((item, i) =>
-                            <div className="description-row">
+                            <div key={i} className="description-row">
                                 <p className="description-row-title">{item.title}</p>
                                 <p className="description-row-info"><span>{item.info}</span></p>
                             </div>
@@ -45,7 +45,7 @@ export const LabResult = () => {
                         </div>
                         
                         {recordInfo.mri.map((item, i) =>
-                            <div className="description-row">
+                            <div key={i} className="description-row">
                                 <p className="description-row-title">{item.title}</p>
                                 <p className="description-row-info"><span>{item.info}</span></p>
                             </div>

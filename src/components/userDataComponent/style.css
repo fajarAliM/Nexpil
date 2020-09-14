@@ -51,6 +51,11 @@
     font-size: 35px;
     color: #333333;
     margin: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 330px;
+    text-align: left;
 }
 
 .user-type {
@@ -69,6 +74,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    background: linear-gradient(to right, rgb(135, 124, 236), rgb(73, 57, 227));
 }
 
 .card-user-info-section {
@@ -80,6 +86,16 @@
     align-items: center;
     padding-top: 20px;
 }
+
+/* .card-user-info-section-for-mobile {
+    padding-left: 44px;
+    padding-right: 44px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    display: none;
+} */
 
 .info-section {
     display: flex;
@@ -299,9 +315,9 @@
 .assigned-task-text {
     font-size: 20px;
     font-family: mediumText;
-    color: #4939E3;
     margin: 0px;
     white-space: nowrap;
+    transition-duration: 0s;
 }
 
 .subscribe-text {
@@ -325,6 +341,23 @@
     margin-right: auto;
     margin-left: 20px;
     cursor: pointer;
+    color:#4939E3;
+}
+
+.add-button:hover {
+    padding: 20px 40px;
+    box-shadow: 0px 3px 6px #0000001A;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px dashed #4939E3;
+    background-color: #4939E3;
+    margin-right: auto;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .note-row {
@@ -346,6 +379,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .discard-button {
@@ -467,10 +501,19 @@
     color: white;
 }
 
+.toggle-info-data-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .option-text {
     font-size: 20px;
     font-family: mediumText;
     margin: 0px;
+    transition-duration: 0s;
 }
 
 .add-input-section {
@@ -716,6 +759,14 @@
         flex-direction: column;
         align-items: flex-end;
     }
+/* 
+    .card-user-info-section {
+        display: none;
+    } */
+
+    /* .card-user-info-section-for-mobile {
+        display: flex;
+    } */
 
     .user-info-title {
         text-align: right;

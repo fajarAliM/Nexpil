@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useRef, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { GET_USER } from '../../store/actionNames';
 import './style.css';
 import { BsSearch, BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
@@ -8,9 +8,17 @@ import { users } from '../../service/users';
 
 export const ChatAvatarsContainer = () => {
     const dispatch = useDispatch();
+    const patientList = useSelector(state => state.patientsList);
+
+    const [patientLists, setPatientLists] = useState();
     const [usersData, setUsersData] = useState(users);
     const [arrowDirection, setArrowDirection] = useState(true);
     const showAvatar = useRef();
+
+    useEffect(() => {
+        setPatientLists(patientList);
+    }, [patientList]);
+    console.log("chat user avatar patients", patientLists);
 
     // Style for the highlighted text.
     const specialColorFont = {
@@ -20,12 +28,12 @@ export const ChatAvatarsContainer = () => {
     // Select user
     const setHighlightedUser = (userItem) => {
         let virtualArray = [];
-        for (let i = 0; i < usersData.length; i++) {
-            if (i !== userItem) virtualArray.push({ ...usersData[i], selected: false });
-            if (i === userItem) virtualArray.push({ ...usersData[i], selected: true })
+        for (let i = 0; i < patientLists.length; i++) {
+            if (i !== userItem) virtualArray.push({ ...patientLists[i], selected: false });
+            if (i === userItem) virtualArray.push({ ...patientLists[i], selected: true })
         }
-        setUsersData(virtualArray);
-        dispatch({ type: GET_USER, payLoad: usersData[userItem] });
+        setPatientLists(virtualArray);
+        // dispatch({ type: GET_USER, payLoad: patientLists[userItem] });
         const width = window.innerWidth;
         if (width <= 890) {
             showAvatar.current.className = showAvatar.current.className === "avatar-main-section" ? "avatar-main-section-showed" : "avatar-main-section";
@@ -54,20 +62,20 @@ export const ChatAvatarsContainer = () => {
                 </div>
                 <div className="users-avatar" id="avatar-scrollbar">
                     
-                    {usersData.map((user, i) =>
+                    {patientLists && patientLists.map((user, i) =>
                         <div onClick={() => setHighlightedUser(i)} key={i} className={user.selected == false ? "user-avatar" : "user-avatar-selected"}>
-                            <img className="avatar-image" src={user.url} />
+                            <img className="avatar-image" src={user.userimage} />
                             <div className="user-info">
-                                <p className="user-name-text">{user.name}</p>
-                                <p className="user-chats-text">{user.lastChat}</p>
+                                <p className="user-name-text">{user.patient_name}</p>
+                                <p className="user-chats-text">Ok! Thanks</p>
                             </div>
                             <div className="chat-info-part">
-                                <p className={user.selected == false ? "chat-date" : "chat-date-selected"}>{user.chatDate}</p>
-                                {user.lastChatNumber !== 0 &&
+                                <p className={user.selected == false ? "chat-date" : "chat-date-selected"}>Jul 29</p>
+                                {/* {user.lastChatNumber !== 0 &&
                                     <div className={user.selected == false ? "chat-number" : "chat-number-selected"}>
                                         <p>{user.lastChatNumber}</p>
                                     </div>
-                                }
+                                } */}
                             </div>
                         </div>
                     )}

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState, useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import './style.css';
 import { BsChatSquareDots } from "react-icons/bs";
 import { sharedColors } from '../../theme/sharedColor';
@@ -9,17 +9,19 @@ import { AssignedText } from './assignedText';
 import { DoctorNotes } from './doctorNotes';
 import { Link } from "react-router-dom";
 import { routers } from '../../config/router';
+import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 
 export const UserDataComponent = () => {
-    const dispatch = useDispatch();
 
     const currectSelectedUser = useSelector(state => state.usersSelect);
     const currentSelectedUserData = useSelector(state => state.patientSelect);
-    const [infoData, setInfoData] = useState();
     const patientDetailData = useSelector(state => state.patientPersonalInfo);
+    const [infoData, setInfoData] = useState();
+    const [userDetailsSection, setUserDetailsSection] = useState(true);
+
+    const detailsSectionRef = useRef();
 
     useEffect(() => {
-        console.log("user data component patient info", patientDetailData);
         const userInfo = [
             {
                 title: "Date of Birth",
@@ -42,13 +44,18 @@ export const UserDataComponent = () => {
             },
         ];
         setInfoData(userInfo);
-    }, [patientDetailData])
-    console.log('user info', infoData)
+    }, [patientDetailData]);
+
+    
+    const toggleUserInfoDetailsSection = () => {
+        setUserDetailsSection(!userDetailsSection);
+        console.log("details section style", detailsSectionRef.current.className);
+    }
 
     // Style for primary color button
-    const style = {
-        background: `linear-gradient(to right, ${sharedColors.primaryButtonGradientStart}, ${sharedColors.primaryButtonGradientEnd})`,
-    }
+    // const style = {
+    //     background: `linear-gradient(to right, ${sharedColors.primaryButtonGradientStart}, ${sharedColors.primaryButtonGradientEnd})`,
+    // }
     return (
         <div className="data-container">
             <div className="card-container">
@@ -59,15 +66,18 @@ export const UserDataComponent = () => {
                         <p className="user-type">{currentSelectedUserData.type}</p>
                     </div>
                     <Link to={routers.CHATPAGE}>
-                        <div style={style} className="show-chat-icon-container">
+                        <div className="show-chat-icon-container">
                             <BsChatSquareDots className="chat-button" size="24px" color="white" />
                         </div>
                     </Link>
                 </div>
-                <div className="card-user-info-section">
+                {/* <div className="toggle-info-data-section" onClick={() => toggleUserInfoDetailsSection()}>
+                    {userDetailsSection === true ? <BsChevronCompactDown size="20px" color="#4939E3" /> : <BsChevronCompactUp size="20px" color="#4939E3"/>}
+                </div> */}
+                <div className="card-user-info-section" ref={detailsSectionRef}>
                     
                     {infoData && infoData.map((item, i) =>
-                        <div className="info-section">
+                        <div key={i} className="info-section">
                             <p className="user-info-title">{item.title}</p>
                             <p className="user-info-description">{item.info}</p>
                         </div>

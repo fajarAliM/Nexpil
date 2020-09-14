@@ -30,7 +30,7 @@ export const Medications = () => {
         <div className="medication-subscription-container">
             
             {medicationData.map((item, i) =>
-                <div className="medication-every-data-card">
+                <div key={i} className="medication-every-data-card">
                     <div className="medication-between-part">
                         <p className="medication-subscription-title">{item.title}</p>
                         <p className="medication-subscription-description">{item.description}</p>

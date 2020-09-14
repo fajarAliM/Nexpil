@@ -32,7 +32,7 @@ export const Immunizations = () => {
             <div className="immunizations-data-row-container">
                
                {immunizationData.map((item, i) =>
-                    <div className="immunization-data-part">
+                    <div key={i} className="immunization-data-part">
                         <p className="immunization-data-title">{item.title}</p>
                         <p className="immunization-data-description">{item.description}</p>
                     </div>

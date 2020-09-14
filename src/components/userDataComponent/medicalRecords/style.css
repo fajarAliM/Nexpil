@@ -51,7 +51,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border-radius: 40px;
+    border-radius: 20px;
     background-color: #F7F7FA;
     margin-bottom: 20px;
 }
@@ -66,9 +66,32 @@
 
 .medication-subscription-title {
     font-size: 20px;
-    font-family: boldTitles;
+    font-family: mediumText;
     color: #4939E3;
     margin: 0px;
+}
+
+.medication-subscription-description {
+    font-size: 16px;
+    margin: 0px;
+    font-family: mediumText;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.medication-subscription-author {
+    font-size: 20px;
+    font-family: mediumText;
+    color: #333333;
+    margin: 0px;
+}
+
+.medication-subscription-date {
+    font-size: 16px;
+    margin: 0px;
+    font-family: mediumText;
+    color: #333333;
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -77,17 +100,25 @@
     }
 
     .immunization-data-description {
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
-@media only screen and (max-width: 1500px) {
-    .immunization-data-title {
-        font-size: 15px;
+@media only screen and (max-width: 1200px) {
+    .medication-subscription-title {
+        font-size: 16px;
+    }
+    
+    .medication-subscription-author {
+        font-size: 16px;
     }
 
-    .immunization-data-description {
-        font-size: 13px;
+    .medication-subscription-description {
+        font-size: 14px;
+    }
+
+    .medication-subscription-date {
+        font-size: 14px;
     }
 }
 
@@ -103,5 +134,26 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .medication-every-data-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .medication-between-part {
+        width: 100%;
+    }
+
+    .medication-between-part:last-child {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .option-text {
+        font-size: 14px;
     }
 }
