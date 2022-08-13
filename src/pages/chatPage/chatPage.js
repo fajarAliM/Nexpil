@@ -1,5 +1,5 @@
 import React, {useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './style.css';
 import { SideBar } from '../../components';
 import { ChatAvatarsContainer } from '../../components';
@@ -9,6 +9,7 @@ import { GET_PATIENTS_LIST } from '../../store/actionNames/homePageActions';
 
 export const ChatPage = () => {
     const dispatch = useDispatch();
+    const settedPatient = useSelector(state => state.setPatientChat);
    
     // Dispatch the action for get patient list after components mounted
     useEffect(() => {
@@ -23,10 +24,10 @@ export const ChatPage = () => {
                 <div className="chat-section-part">
                         <div className="chat-page-section">
                             <div className="chatting-section">
-                                <ChatWindow />
+                                <ChatWindow patientSetted={settedPatient}/>
                             </div>
                             <div className="chatting-user-info-section">
-                                <ChatUserInfo />
+                                <ChatUserInfo patientSetted={settedPatient} />
                             </div>
                         </div>
                 </div>

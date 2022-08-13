@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { GET_USER } from '../../store/actionNames';
+import { GET_CHAT_PATIENT_TARGET, SET_GET_CHAT_PATIENT_TARGET } from '../../store/actionNames';
 import './style.css';
 import { BsSearch, BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import { sharedColors } from '../../theme/sharedColor';
@@ -17,8 +17,8 @@ export const ChatAvatarsContainer = () => {
 
     useEffect(() => {
         setPatientLists(patientList);
+        dispatch({type: GET_CHAT_PATIENT_TARGET, payLoad: patientList[0]});
     }, [patientList]);
-    console.log("chat user avatar patients", patientLists);
 
     // Style for the highlighted text.
     const specialColorFont = {
@@ -39,6 +39,7 @@ export const ChatAvatarsContainer = () => {
             showAvatar.current.className = showAvatar.current.className === "avatar-main-section" ? "avatar-main-section-showed" : "avatar-main-section";
             setArrowDirection(true);
         }
+        dispatch({type: SET_GET_CHAT_PATIENT_TARGET, payLoad: patientList[userItem]});
     }
 
     // Show chat list when mobile responsive

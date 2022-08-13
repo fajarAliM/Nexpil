@@ -18,6 +18,7 @@ export const UserDataComponent = () => {
     const patientDetailData = useSelector(state => state.patientPersonalInfo);
     const [infoData, setInfoData] = useState();
     const [userDetailsSection, setUserDetailsSection] = useState(true);
+    const [detailsSectionClass, setDetailsSectionClass] = useState("card-user-info-section");
 
     const detailsSectionRef = useRef();
 
@@ -49,7 +50,7 @@ export const UserDataComponent = () => {
     
     const toggleUserInfoDetailsSection = () => {
         setUserDetailsSection(!userDetailsSection);
-        console.log("details section style", detailsSectionRef.current.className);
+        setDetailsSectionClass(detailsSectionClass === "card-user-info-section" ? "card-user-info-section-for-mobile" : "card-user-info-section");
     }
 
     // Style for primary color button
@@ -71,10 +72,10 @@ export const UserDataComponent = () => {
                         </div>
                     </Link>
                 </div>
-                {/* <div className="toggle-info-data-section" onClick={() => toggleUserInfoDetailsSection()}>
+                <div className="toggle-info-data-section" onClick={() => toggleUserInfoDetailsSection()}>
                     {userDetailsSection === true ? <BsChevronCompactDown size="20px" color="#4939E3" /> : <BsChevronCompactUp size="20px" color="#4939E3"/>}
-                </div> */}
-                <div className="card-user-info-section" ref={detailsSectionRef}>
+                </div>
+                <div className={detailsSectionClass} ref={detailsSectionRef}>
                     
                     {infoData && infoData.map((item, i) =>
                         <div key={i} className="info-section">

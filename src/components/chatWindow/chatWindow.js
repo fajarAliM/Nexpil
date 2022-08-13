@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 import { BsFillCameraVideoFill, BsPlus } from "react-icons/bs";
 import { routers } from "../../config/router";
 import { Link } from "react-router-dom";
+import { SET_GET_CHAT_PATIENT_TARGET } from '../../store/actionNames';
 
 const chatRecords = [
     {
@@ -15,19 +16,24 @@ const chatRecords = [
     }
 ]
 
-export const ChatWindow = ({page}) => {
+export const ChatWindow = ({page, patientSetted}) => {
+    const dispatch = useDispatch();
     const patient = useSelector(state => state.usersSelect);
     const [chatTexts, setChatTexts] = useState(chatRecords);
+
+    const setTargetPatient = () => {
+        dispatch({type: SET_GET_CHAT_PATIENT_TARGET, payLoad: patientSetted});
+    }
 
     return (
         <div className="chat-main-part">
             <div className="chat-user-name">
                 <div className="chat-patient-name-title">
-                    <p className="chat-patient-name">Elise Antoine</p>
+                    {patientSetted && <p className="chat-patient-name">{patientSetted.name}</p>}
                     {!page && <p className="chat-user-net-state">Online</p>}
                 </div>
                 {!page && <Link to={routers.DETAIL_PAGE}>
-                    <div className="video-call-button">
+                    <div onClick={()=>setTargetPatient()} className="video-call-button">
                         <BsFillCameraVideoFill color="white" size="15px" />
                     </div>
                 </Link>}
@@ -36,7 +42,7 @@ export const ChatWindow = ({page}) => {
                
                 {chatTexts.map((item, i) =>
                     <div key={i} className={item.key === "recieved" ? "chat-text-recieved" : "chat-text-sent"}>
-                        <img src={patient.url} className="chat-avatar-image" />
+                        {patientSetted && <img src={item.key === "recieved" ? patientSetted.userimage: "https://raw.githubusercontent.com/publsoft/publsoft.github.io/master/projects/dentist-demo/assets/images/profile_photo.png"} className="chat-avatar-image" />}
                         <div className={item.key === "recieved" ? "recieved-chat-text" : "sent-chat-text"}>
                             <p className="chat-text">{item.text}</p>
                         </div>

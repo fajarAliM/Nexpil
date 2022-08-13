@@ -5,6 +5,9 @@ import {
     patientSelect, 
     patientPersonalInfo 
 } from './usersReducers';
+import {
+    setPatientChat,
+} from './chatReducers';
 
 // Export combined reducers
 export default combineReducers({
@@ -12,4 +15,5 @@ export default combineReducers({
     patientsList,
     patientSelect,
     patientPersonalInfo,
+    setPatientChat,
 })

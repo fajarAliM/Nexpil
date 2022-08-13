@@ -3,20 +3,20 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import { BsFillPlusCircleFill } from "react-icons/bs";
 
-export const ChatUserInfo = () => {
+export const ChatUserInfo = ({ patientSetted }) => {
     const userInfo = useSelector(state => state.usersSelect);
 
     return (
         <div className="chat-user-info-main-section">
-            <img src={userInfo.url} className="chat-user-info-avatar" alt="user avatar" />
-            <h1 className="chat-user-info-name">{userInfo.name}</h1>
+            <img src={patientSetted.userimage} className="chat-user-info-avatar" alt="user avatar" />
+            <h1 className="chat-user-info-name">{patientSetted.name}</h1>
             <div className="chat-user-info-row">
                 <p className="chat-user-info-row-title">Age:</p>
-                <p className="chat-user-info-row-description">{userInfo.age}</p>
+                <p className="chat-user-info-row-description">{patientSetted.age}</p>
             </div>
             <div className="chat-user-info-row">
                 <p className="chat-user-info-row-title">D.O.B:</p>
-                <p className="chat-user-info-row-description">{userInfo.birthday}</p>
+                <p className="chat-user-info-row-description">{patientSetted.dob}</p>
             </div>
             <div className="chat-user-info-row">
                 <p className="chat-user-info-row-title">Allergies:</p>
